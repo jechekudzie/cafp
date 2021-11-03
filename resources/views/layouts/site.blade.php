@@ -157,13 +157,13 @@
                         <a style="font-size: 16px;" href="#" class="dropdown-toggle"
                            data-toggle="dropdown">Publications</a>
                         <ul class="dropdown-menu">
-                            <li><a href="{{url('#')}}">Discussion papers</a></li>
-                            <li><a href="{{url('#')}}">Policy briefs</a>
-                            <li><a href="{{url('#')}}">Advisory notes</a>
-                            <li><a href="{{url('#')}}">Journal articles</a>
-                            <li><a href="{{url('#')}}">Reports</a></li>
-                            <li><a href="{{url('#')}}">Books</a>
-                            <li><a href="{{url('#')}}">Book Chapters</a>
+                            <li><a href="{{url('/cafp_publications')}}">Discussion papers</a></li>
+                            <li><a href="{{url('/cafp_publications')}}">Policy briefs</a>
+                            <li><a href="{{url('/cafp_publications')}}">Advisory notes</a>
+                            <li><a href="{{url('/cafp_publications')}}">Journal articles</a>
+                            <li><a href="{{url('/cafp_publications')}}">Reports</a></li>
+                            <li><a href="{{url('/cafp_publications')}}">Books</a>
+                            <li><a href="{{url('/cafp_publications')}}">Book Chapters</a>
                             </li>
 
                         </ul>

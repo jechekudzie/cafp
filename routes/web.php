@@ -13,8 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-
 Route::get('/', 'SiteController@index');
 Route::get('/establishment', 'SiteController@about');
 Route::get('/about', 'SiteController@about');
@@ -39,6 +37,7 @@ Route::get('/capacity_internship', 'SiteController@capacity_internship');
 Route::get('/projects', 'SiteController@projects');
 Route::get('/data', 'SiteController@data');
 Route::get('/covid', 'SiteController@covid');
+Route::get('/cafp_publications', 'SiteController@publications');
 
 
 //backend
@@ -52,8 +51,6 @@ Route::resource('/admin/events', 'EventsController');
 Route::post('/admin/events/{event}/images', 'EventsController@event_images');
 Route::post('/admin/events/{event}/files', 'EventsController@event_files');
 
-
-
 Route::resource('/admin/plants', 'PlantsController');
 Route::patch('/admin/partners/logo/{partner}', 'PartnersController@logoUpdate');
 
@@ -61,6 +58,7 @@ Route::resource('/admin/thematic_areas', 'ThematicAreasController');
 
 Route::resource('/admin/publication_categories', 'PublicationCategoriesController');
 Route::resource('/admin/publications', 'PublicationsController');
+
 
 
 

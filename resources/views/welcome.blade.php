@@ -496,14 +496,15 @@
  --}}
     <div id="partners">
         <div class="container">
+
             <div class="row">
+                <h2 class="text-center">
+                    <a href="{{url('/plants/Useful Plants of Zimbabwe.pdf')}}" target="_blank">Useful Plants of Zimbabwe
+                        With
+                        Potential as Smallholder Crops</a>
+                </h2>
                 <div class="col-md-12 text-center heading_space heading">
-                    <h2>
-                        <a href="{{url('/plants/Useful Plants of Zimbabwe.pdf')}}" target="_blank">
-                            Useful Plants
-                            of Zimbabwe With Potential as Smallholder Crops
-                        </a>
-                    </h2>
+
 
                     <h3>
                         25 indigenous plant species with commercial potential in the food, beverage, health and
@@ -514,7 +515,7 @@
                 <div id="partners_slider">
                     @foreach($plants as $plant)
                         <div class="item">
-                            <a href="{{url('/plants/Useful Plants of Zimbabwe.pdf')}}" target="_blank"><img src="{{asset
+                            <a href="{{asset($plant->file)}}" target="_blank"><img src="{{asset
                             ($plant->path)}}" alt="Image"></a>
                         </div>
                     @endforeach

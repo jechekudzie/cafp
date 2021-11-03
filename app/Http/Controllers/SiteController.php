@@ -141,4 +141,11 @@ class SiteController extends Controller
         $featured_highlights = Event::all();
         return view('event_detail', compact('event','featured_highlights'));
     }
+
+
+    public function publications()
+    {
+
+        return view('publications');
+    }
 }

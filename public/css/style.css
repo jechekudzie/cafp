@@ -4230,6 +4230,17 @@ nav.navbar.bootsnav li.dropdown ul.dropdown-menu > li a:hover, nav.navbar.bootsn
     padding-top:165px;
     padding-bottom:150px;
 }
+#inner-banner-publications{
+    background:url('/banners/new work-02.jpg');
+    -webkit-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    background-position: center center;
+    background-repeat:no-repeat;
+    border-bottom:7px solid #117143;
+    padding-top:165px;
+    padding-bottom:150px;
+}
 
 
 #inner-banner{
