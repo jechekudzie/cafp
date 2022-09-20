@@ -16,7 +16,7 @@ class CouncilMembersController extends Controller
     {
         //
         $council_members = CouncilMember::all();
-        return view('admin.council_members.index',compact('council_members'));
+        return view('admin.council_members.index', compact('council_members'));
     }
 
     /**
@@ -33,16 +33,16 @@ class CouncilMembersController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
         //
         $councilMember = request()->validate([
-            'name'=>'required',
-            'position'=>'nullable',
-            'bio'=>'nullable',
+            'name' => 'required',
+            'position' => 'nullable',
+            'bio' => 'nullable',
         ]);
         $image = '';
 
@@ -63,41 +63,42 @@ class CouncilMembersController extends Controller
 
         CouncilMember::create($councilMember);
 
-        return back()->with('message','Council Member successfully created.');
+        return back()->with('message', 'Council Member successfully created.');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function show(CouncilMember $councilMember)
+    public function show($councilMember)
     {
         //
-        return view('admin.council_members.show',compact('councilMember'));
+        $councilMember = CouncilMember::find($councilMember);
+        return view('admin.council_members.show', compact('councilMember'));
 
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($councilMember)
     {
         //
         $councilMember = CouncilMember::find($councilMember);
-        return view('admin.council_members.edit',compact('councilMember'));
+        return view('admin.council_members.edit', compact('councilMember'));
 
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update($councilMember)
@@ -105,9 +106,9 @@ class CouncilMembersController extends Controller
         //
         $councilMember = CouncilMember::find($councilMember);
         $updated = request()->validate([
-            'name'=>'required',
-            'position'=>'nullable',
-            'bio'=>'nullable',
+            'name' => 'required',
+            'position' => 'nullable',
+            'bio' => 'nullable',
         ]);
 
         $image = $councilMember->image;
@@ -135,20 +136,21 @@ class CouncilMembersController extends Controller
 
         $councilMember->update($updated);
 
-        return back()->with('message','Council Member updated successfully.');
+        return back()->with('message', 'Council Member updated successfully.');
 
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(CouncilMember $councilMember)
+    public function destroy($councilMember)
     {
         //
+        $councilMember = CouncilMember::find($councilMember);
         $councilMember->delete();
-        return redirect('/council_members')->with('message','Council Member deleted successfully');
+        return redirect('/admin/board')->with('message', 'Board Member deleted successfully');
     }
 }

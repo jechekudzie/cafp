@@ -164,6 +164,19 @@
                 </div>
             </div>
             <div class="row">
+                <div class="item">
+                    <div class="team2_detail">
+                        <a href="{{url('/trustee_detail/'.$chair->id)}}"> <img style="width: 200px;" src="{{asset
+                        ($chair->image)}}" class="img-circle" alt="image"></a>
+                        <h3><a href="{{url('/trustee_detail/'.$chair->id)}}">{{$chair->name}}</a></h3>
+                        <span style="font-size: 15px; font-weight: bold;"><a href="{{url('/trustee_detail/'
+                        .$chair->id)}}">{{$chair->position}}</a></span>
+                        {{--<p>No one would have believed in the last years of the nine-teenth century that this world was being</p>--}}
+                    </div>
+                    {{--<div class="btn btn-primary">
+                        Read More</a>
+                    </div>--}}
+                </div>
                 <div id="team2_slider" {{--class="owl-carousel owl-theme"--}}>
                     @foreach($board_members as $board_member)
                         <div class="item">

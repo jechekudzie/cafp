@@ -155,7 +155,7 @@
         <div class="container">
             <div class="row">
                 <div style="text-align: center" class="heading">
-                    <h2>CAFP Vision, Mission and Strategic Objectives</h2>
+                   {{-- <h2>CAFP Vision, Mission and Strategic Objectives</h2>--}}
                 </div>
                 <div class="col-md-12 col-sm-12 col-xs-12 m-t-35">
                     <div class="creative_detail">
@@ -187,7 +187,7 @@
                         </div>
                         <h3>Strategic Objectives </h3>
                         <ul class="special-services-list">
-                            <li>1.
+                            <li>
                                 To shape a productive,
                                 sustainable,
                                 inclusive,
@@ -197,35 +197,46 @@
                                 end hunger and malnutrition, and reduce poverty through high quality evidence based
                                 public research goods on policies, investments, and programmes.
                             </li>
-                            <li>2.  To conduct, catalyse, assist, curate and support policy
+                            <li>  To conduct, catalyse, assist, curate and support policy
                                 research and analysis in
                                 Zimbabwe or elsewhere into all aspects of agriculture.
                             </li>
-                            <li>3.  To integrate research findings into national, regional,
+                            <li>  To integrate research findings into national, regional,
                                 and international
                                 investments, policy strategies, dialogue, and programmes.
                             </li>
-                            <li>4.  To promote platforms for dialogue and engaging to enable
+                            <li>  To promote platforms for dialogue and engaging to enable
                                 agriculture sector
                                 stakeholders to effectively participate in agricultural (all value chains) policy
                                 development and implementation.
                             </li>
-                            <li>5.  To establish strategic alliances with institutions that have similar and
+                            <li>  To establish strategic alliances with institutions that have similar and
                                 complementary mandates
                             </li>
-                            <li>6.  To support the development and strengthening of capacity for policy research,
+                            <li>  To support the development and strengthening of capacity for policy research,
                                 analysis and outreach of public and private institutions through the establishment of
                                 strategic alliances, and organizational capacity building of key agriculture sectors
                                 stakeholders.
                             </li>
-                            <li>7.  To build an environment of trust, transparency and accountability necessary for
+                            <li>  To build an environment of trust, transparency and accountability necessary for
                                 fostering long-term investment, financial stability and business integrity of the Center
                             </li>
-                            <li>8.  To responsibly generate and manage the Center’s resources in order to enhance the
+                            <li>  To responsibly generate and manage the Center’s resources in order to enhance the
                                 long-term sustainability of the Center.
                             </li>
                         </ul>
+                        <br/>
+                        <a class="btn btn-success" href="{{asset('/assets/About The Center for Agriculture and Food Policy.pdf')}}"
+                           target="_blank">Download Profile</a>
+                    </div>
+                </div>
 
+                <div class="col-md-12 col-sm-12 col-xs-12 m-t-35">
+                    <div class="creative_detail">
+                        <div class="tag">
+                            <i class="fa fa-line-chart" aria-hidden="true"></i>
+                        </div>
+                        <h3>Core Values </h3>
                         <div style="padding-left: 0%" align="left" class="row">
                             <table>
 
@@ -416,8 +427,8 @@
                         </div>
                         <br/>
                         <br/>
-                        <a class="btn btn-success" href="{{asset('/assets/About The Center for Agriculture and Food Policy.pdf')}}"
-                           target="_blank">Download Profile</a>
+                        {{--<a class="btn btn-success" href="{{asset('/assets/About The Center for Agriculture and Food Policy.pdf')}}"
+                           target="_blank">Download Profile</a>--}}
                     </div>
                 </div>
 

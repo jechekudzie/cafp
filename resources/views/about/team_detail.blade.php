@@ -25,10 +25,10 @@
                     <div class="review-tabs">
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="active"><a href="#description" aria-controls="description"
-                                                                      role="tab"
-                                                                      data-toggle="tab">{{$secretariat->name}} -
-                                    {{$secretariat->position}}</a>
+                            <li role="presentation" class="active">
+                                <a href="#description" aria-controls="description" role="tab" data-toggle="tab">{{$secretariat->name}}
+                                    {{--{{$secretariat->position}}--}}
+                                </a>
                         </ul>
 
                         <!-- Tab panes -->
@@ -45,7 +45,7 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-12 col-md-8 col-lg-8">
-                                        <h4>BIO</h4>
+                                        {{--<h4>BIO</h4>--}}
                                         {!! $secretariat->bio !!}
                                     </div>
                                 </div>
@@ -60,7 +60,7 @@
                         <h3>CAFP Staff Team</h3>
                         <ul class="blog-sidebar-category">
                             @foreach($secretariats as $secretariat)
-                                <li><a href="{{url('/team_detail/'.$secretariat->id)
+                                <li><a href="{{url('/staff/'.$secretariat->id)
                                 }}">{{$secretariat->name}} ({{$secretariat->position}})</a></li>
                             @endforeach
 

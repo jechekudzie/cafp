@@ -42,7 +42,7 @@
                                         <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
                                     </div>
                                 @endif
-                                <h4 class="card-title">Blog</h4>
+                                <h4 class="card-title">Upcoming events</h4>
                                 {{--
                                                                     <h6 class="card-subtitle">A City is the practitioner's area of practice.</h6>
                                 --}}
@@ -58,7 +58,7 @@
                                     {{csrf_field()}}
 
                                     <div class="form-group">
-                                        <h5> featured highlight  <span class="text-danger">*</span></h5>
+                                        <h5> Event title  <span class="text-danger">*</span></h5>
                                         <div class="controls">
                                             <input type="text" name="name" value="{{old('name')}}" class="form-control"
                                                    required
@@ -68,6 +68,25 @@
                                         </div>
                                     </div>
 
+                                    <div class="form-group">
+                                        <h5>  title <span class="text-danger">*</span></h5>
+                                        <div class="controls">
+                                            <input type="text" name="name"
+                                                   class="form-control"
+                                                   required
+                                                   data-validation-required-message="This field is required">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <h5>  location <span class="text-danger">*</span></h5>
+                                        <div class="controls">
+                                            <input type="text" name="location"
+                                                   class="form-control"
+                                                   required
+                                                   data-validation-required-message="This field is required">
+                                        </div>
+                                    </div>
 
                                     <div class="form-group">
                                         <h5> Image Cover <span class="text-danger">*</span></h5>

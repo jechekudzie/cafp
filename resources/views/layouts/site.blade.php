@@ -8,8 +8,11 @@
     <title>Centre For Agriculture and Food Policy</title>
 
     <!-- Bootstrap -->
-    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
+  {{--  <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
+--}}
 
+<!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <!-- Font-awesome -->
     <link href="{{asset('css/font-awesome.min.css')}}" rel="stylesheet">
 
@@ -76,7 +79,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="javascript:void(0)">
+                <a class="navbar-brand" href="{{url('/')}}">
                     <img src="{{asset('tests/logo 2-01.jpg')}}"
                          class="img-responsive logo"
                          alt="">
@@ -86,8 +89,7 @@
             <div class="collapse navbar-collapse nav_2 clearfix" id="navbar-menu">
                 <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
                     <li style="font-size: 16px;" class="">
-                        <a style="font-size: 16px;" href="{{url('/')}}" class="dropdown-toggle"
-                           data-toggle="dropdown">Home</a>
+                        <a style="font-size: 16px;" href="{{url('/')}}">Home</a>
                     </li>
 
                     <li style="font-size: 16px;" class="dropdown">
@@ -109,7 +111,8 @@
                                 </ul>
                             </li>
                             <li><a href="{{url('/governance')}}">Governance</a></li>
-                           {{-- <li><a href="{{url('/team')}}">Our Team</a></li>--}}
+                            <li><a href="{{url('/partnerships')}}">Partnerships and MOUs</a></li>
+                            {{-- <li><a href="{{url('/team')}}">Our Team</a></li>--}}
 
                             <li class="dropdown">
                                 <a href="javascript:void(0)" class="dropdown-toggle"
@@ -117,9 +120,8 @@
                                 <ul class="dropdown-menu">
                                     <li><a href="{{url('/trustees')}}">Board Of Trustees</a>
                                     </li>
-                                    <li><a href="{{url('/team')}}">CAFP Staff</a></li>
-                                    <li><a href="{{url('#')}}">CAFP Associates</a></li>
-
+                                    <li><a href="{{url('/staff')}}">CAFP Staff</a></li>
+                                    <li><a href="{{url('/associates')}}">CAFP Research Associates</a></li>
                                 </ul>
                             </li>
                             <li><a href="{{url('/funding')}}">Funding</a></li>
@@ -135,54 +137,36 @@
                             </li>
 
                             <li class="dropdown">
-                                <a href="javascript:void(0)" class="dropdown-toggle"
-                                   data-toggle="dropdown">Capacity Development</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="{{url('/rpd/CAFP Masters Completion Programme.pdf')}}"
-                                           target="_blank">Masters
-                                            completion programme</a>
-                                    </li>
-                                    <li><a href="{{url('/rpd/CAFP Internship programme.pdf')}}" target="_blank">Internship
-                                            programme</a></li>
+                                <a href="{{url('/capacity_development')}}">Capacity Development</a>
 
-                                </ul>
                             </li>
-                            </li>
-                            <li><a href="{{url('/projects')}}">Projects & Programs</a></li>
-                            <li><a href="{{url('/data')}}">Data resources</a></li>
+
+                           {{-- <li><a href="{{url('/projects')}}">Projects & Programs</a></li>--}}
+                           {{-- <li><a href="{{url('/data')}}">Data resources</a></li>--}}
                         </ul>
                     </li>
 
-                    <li style="font-size: 16px;" class="dropdown">
-                        <a style="font-size: 16px;" href="#" class="dropdown-toggle"
-                           data-toggle="dropdown">Publications</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{{url('/cafp_publications')}}">Discussion papers</a></li>
-                            <li><a href="{{url('/cafp_publications')}}">Policy briefs</a>
-                            <li><a href="{{url('/cafp_publications')}}">Advisory notes</a>
-                            <li><a href="{{url('/cafp_publications')}}">Journal articles</a>
-                            <li><a href="{{url('/cafp_publications')}}">Reports</a></li>
-                            <li><a href="{{url('/cafp_publications')}}">Books</a>
-                            <li><a href="{{url('/cafp_publications')}}">Book Chapters</a>
-                            </li>
-
-                        </ul>
+                    <li style="font-size: 16px;" >
+                        <a style="font-size: 16px;" href="{{url('/publications/all')}}">Publications</a>
                     </li>
 
-                    <li style="font-size: 16px;" class="dropdown">
+                    <li style="font-size: 16px;" >
+                        <a style="font-size: 16px;" href="{{url('/events/all')}}">Events</a>
+                    </li>
+
+                    {{--<li style="font-size: 16px;" class="dropdown">
                         <a style="font-size: 16px;" href="#" class="dropdown-toggle"
                            data-toggle="dropdown">Outreach</a>
                         <ul class="dropdown-menu">
-                            <li><a href="{{url('#')}}">Events</a>
+                            <li><a href="{{url('/events/2')}}">Events</a>
                             </li>
-                            <li><a href="{{url('#')}}">Blogs</a>
-                            </li>
-                            <li><a href="{{url('#')}}">Presentations</a></li>
-                            <li><a href="{{url('#')}}">Newsletters</a></li>
-                            <li><a href="{{url('#')}}">Gallery</a></li>
+                           --}}{{-- <li><a href="{{url('#')}}">Blogs</a></li>
+                            <li><a href="{{url('#')}}">Presentations</a></li>--}}{{--
+                           --}}{{-- <li><a href="{{url('#')}}">Newsletters</a></li>--}}{{--
+                           --}}{{-- <li><a href="{{url('#')}}">Gallery</a></li>--}}{{--
                         </ul>
-                    </li>
-                    <li style="font-size: 16px;" class="dropdown">
+                    </li>--}}
+                    {{--<li style="font-size: 16px;" class="dropdown">
                         <a style="font-size: 16px;" href="#" class="dropdown-toggle" data-toggle="dropdown">Get
                             Involved</a>
                         <ul class="dropdown-menu">
@@ -193,11 +177,9 @@
                             <li><a href="{{url('#')}}">Sponsor event</a></li>
                             <li><a href="{{url('#')}}">Become Associate</a></li>
                         </ul>
-                    </li>
+                    </li>--}}
 
-
-                    <li style="font-size: 16px;"><a style="font-size: 16px;" href="{{url('/contact')}}">Contact Us</a>
-                    </li>
+                    <li style="font-size: 16px;"><a style="font-size: 16px;" href="{{url('/contact')}}">Contact Us</a></li>
                 </ul>
             </div>
         </div>
@@ -253,8 +235,10 @@
                         <p><i style="color: white;" class="fa fa-map-marker" aria-hidden="true"></i>
                         </p>
                         <p>
-                            <span>1 Mold Crescent,</span>
-                            <span>Kensington, Harare, Zimbabwe</span>
+                            <span>ZB Centre 2nd floor,</span>
+                            <span>Kwame Nkrumah Avenue, Central Business District,</span>
+                            <span>Harare, Zimbabwe</span>
+
                         </p>
                     </div>
                 </div>
@@ -276,15 +260,19 @@
             <div class="col-md-3 col-sm-3 col-xs-12">
                 <div class="footer_news">
                     <h3>Partners</h3>
-                    <div id="sync1" class="owl-carousel">
+                    <div style="background-color: white" id="sync1" class="owl-carousel">
                         @foreach(\App\Models\Partner::all() as $partner)
-                            <div class="item"><img src="{{asset($partner->path)}}" alt="image"></div>
+                            <a href="{{$partner->url}}" target="_blank">
+                                <div class="item"><img src="{{asset($partner->path)}}" alt="image"></div>
+                            </a>
                         @endforeach
 
                     </div>
-                    <div id="sync2" class="owl-carousel">
+                    <div style="background-color: white" id="sync2" class="owl-carousel">
                         @foreach(\App\Models\Partner::all() as $partner)
-                            <div class="item"><img src="{{asset($partner->path)}}" alt="image"></div>
+                            <a href="{{$partner->url}}" target="_blank">
+                                <div class="item"><img src="{{asset($partner->path)}}" alt="image"></div>
+                            </a>
                         @endforeach
                     </div>
                 </div>
@@ -307,15 +295,14 @@
                 </div>
                 <div class="col-md-5">
                     <ul class="socialicons">
-                        <li><a target="_blank" href="https://www.facebook
-                        .com/Center-for-Agriculture-and-Food-Policy-108160784863996/ "><i class="fa fa-facebook"
-                                                                                          aria-hidden="true"></i></a>
+                        <li><a target="_blank" href="https://www.facebook.com/CAFP2021"><i class="fa fa-facebook"
+                                                                                             aria-hidden="true"></i></a>
                         </li>
-                        <li><a target="_blank" href="https://twitter.com/CenterforAgric1?s=09 "><i class="fa fa-twitter"
-                                                                                                   aria-hidden="true"></i></a>
+                        <li><a target="_blank" href="https://twitter.com/CenterforAgric1?s=09"><i class="fa fa-twitter"
+                                                                                                  aria-hidden="true"></i></a>
                         </li>
                         <li><a target="_blank"
-                               href="https://www.linkedin.com/company/center-for-agriculture-and-food-policy "><i
+                               href="https://www.linkedin.com/company/center-for-agriculture-and-food-policy"><i
                                     class="fa fa-linkedin" aria-hidden="true"></i></a>
                         </li>
                         <li><a target="_blank" href="https://www.instagram.com/cafp_2021zim/"><i class="fa fa-instagram"
@@ -330,7 +317,10 @@
 <!-- /#Footer -->
 
 <script src="{{asset('js/jquery.2.2.3.min.js')}}"></script>
-<script src="{{asset('js/bootstrap.min.js')}}"></script>
+{{--<script src="{{asset('js/bootstrap.min.js')}}"></script>--}}
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
 <script src="{{asset('js/owl.carousel.min.js')}}"></script>
 <script src="{{asset('js/bootsnav.js')}}"></script>
 <script src="{{asset('js/jquery.cubeportfolio.min.js')}}"></script>
@@ -353,14 +343,14 @@
 <script src="{{asset('js/functions.js')}}"></script>
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-        s1.async=true;
-        s1.src='https://embed.tawk.to/6169b44386aee40a5736c96c/1fi2egaha';
-        s1.charset='UTF-8';
-        s1.setAttribute('crossorigin','*');
-        s0.parentNode.insertBefore(s1,s0);
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/6169b44386aee40a5736c96c/1fi2egaha';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
     })();
 </script>
 <!--End of Tawk.to Script-->

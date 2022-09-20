@@ -23,9 +23,12 @@ class Publication extends Model
                 ->orWhere('title', 'like', '%' . $search . '%')
                 ->orWhere('sub_title', 'like', '%' . $search . '%')
                 ->orWhere('authors', 'like', '%' . $search . '%')
+
                 ->orWhereDoesntHave('publication_category')->orWhereHas('publication_category', function ($query) use ($search) {
                     $query->where('name', 'like', '%' . $search . '%');
-                });
+                }
+
+                );
     }
 
     public function scopeCategory($query, $publication_category)

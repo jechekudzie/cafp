@@ -21,13 +21,13 @@
     <section id="creative" class="padding_bottom padding_top">
         <div class="container">
             <div class="row">
-                <div style="text-align: center" class="heading">
+                {{--<div style="text-align: center" class="heading">
                     <h2>CAFP’s Approach </h2>
-                </div>
+                </div>--}}
                 <div class="col-md-12 col-sm-12 col-xs-12 m-t-35">
                     <div class="creative_detail">
                         <div class="tag">
-                            <i class="fa fa-line-chart" aria-hidden="true"></i>
+                            <i class="{{--fa fa-line-chart--}}" aria-hidden="true"></i>
                         </div>
                         <div class="row">
                             <div class="col-md-8 col-sm-8 col-xs-12">

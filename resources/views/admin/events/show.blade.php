@@ -11,7 +11,7 @@
         <!-- ============================================================== -->
         <div class="row page-titles">
             <div class="col-md-5 align-self-center">
-                <a href="/admin/blogs" class="btn btn-success"></a>
+                <a href="/admin/events" class="btn btn-success"></a>
 
 
             </div>
@@ -19,7 +19,7 @@
                 <div class="d-flex justify-content-end align-items-center">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                        <li class="breadcrumb-item active">{{$blog->name}} </li>
+                        <li class="breadcrumb-item active">{{$event->name}} </li>
                     </ol>
                 </div>
             </div>
@@ -44,8 +44,8 @@
                                         <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
                                     </div>
                                 @endif
-                                <h4 class="card-title">{{$blog->title}} </h4>
-                                <h6 class="card-subtitle">Delete {{$blog->title}} </h6>
+                                <h4 class="card-title">{{$event->name}} </h4>
+                                <h6 class="card-subtitle">Delete {{$event->name}} </h6>
                             </div>
 
                         </div>
@@ -53,10 +53,10 @@
                         <div class="row">
                             <div class="col-2"></div>
                             <div class="col-8">
-                                <form action="/admin/blogs/{{$blog->id}}" method="post" class="m-t-40" novalidate>
+                                <form action="/admin/events/{{$event->id}}" method="post" class="m-t-40" novalidate>
                                     {{method_field('DELETE')}}
                                     {{csrf_field()}}
-                                        <h5><span class="text-danger">Are you sure you want to delete {{$blog->title}} ?</span></h5>
+                                        <h5><span class="text-danger">Are you sure you want to delete this event ?</span></h5>
                                     <div class="form-group">
                                         <div class="controls">
                                             <input type="submit" name="add"

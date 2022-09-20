@@ -2,13 +2,13 @@
 
 @section('content')
     <!-- Inner Banner Start -->
-    <section style="margin-top: 100px" id="inner-banner-featured">
+    <section style="margin-top: 100px" id="inner-banner-events">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
                     <div class="inner-banner-detail">
-                        {{--<p><a href="javascript:void(0)">Home</a><span> - </span>About Us</p>
-                        <h2>Our Strategy</h2>--}}
+
+                        <h2>{{$event->title}}</h2>
                     </div>
                 </div>
             </div>
@@ -23,24 +23,25 @@
                 <div class="col-md-9 col-sm-9 col-xs-12">
 
                     <div class="blog-box">
-
                         <div id="web" class="blog-box-img">
                             <div id="bloghome_slider">
 
                                 <div class="item web_box">
-                                    <img src="{{asset($event->image)}}" alt="image">
+                                    <img style="width: 1000px; ;height: 500px;" src="{{asset($event->image)}}"
+                                         alt="image">
                                 </div>
-
-
                             </div>
                             {{--<div class="date-tag">
                                 <span class="date-sec"><p>25</p><p>May</p></span>
                                 <span class="pic-sec"><i class="fa fa-picture-o" aria-hidden="true"></i></span>
                             </div>--}}
                         </div>
-
                         <div class="blog-box-deatil">
                             <h2><a href="#">{{$event->name}}</a></h2>
+                            <br/>
+                            @if($event->speaker != null)
+                                <h5><a href="#">Speaker: {{$event->speaker}}</a></h5>
+                            @endif
                             <div class="blog-tags">
                                 {{--<a href="#"><span>By</span> {{}},</a>--}}
                                 {{--  <a href="#"><span><i class="fa fa-comment-o" aria-hidden="true"></i></span> 25,</a>
@@ -54,16 +55,15 @@
                                         <a href="{{asset($file->name)}}" target="_blank" class="download-bro"><i
                                                 class="fa fa-download" aria-hidden="true"></i> {{$file->name}}
                                         </a>
-
-
                                     @endforeach
                                 @endif
 
                             </div>
 
                             <div class="blog-sidebar-box">
-
-                                <h3>Images</h3>
+                                @if($event->event_images->count() > 0)
+                                    <h3>Images</h3>
+                                @endif
                                 <div id="latest_blog_slider" class="owl-carousel owl-theme">
 
                                     @if($event->event_images)
@@ -123,9 +123,9 @@
                         <h3>Featured Highlights</h3>
                         <ul class="blog-sidebar-category">
                             @foreach($featured_highlights as $featured_highlight)
-                                <li><a href="{{url('events/'.$featured_highlight->id)}}">{{$featured_highlight->name}}
-                                        <span
-                                            class="pull-right">18</span></a></li>
+                                <li>
+                                    <a href="{{url('events/'.$featured_highlight->id)}}">{{$featured_highlight->name}}
+                                    </a></li>
                             @endforeach
                         </ul>
 

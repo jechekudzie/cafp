@@ -155,7 +155,7 @@
             <div class="row">
                 <div style="text-align: center;" class="col-md-12">
                     <div class="inner_heading heading_space">
-                        <h2>CAFP Monitoring Evaluation, Learning and Impact Assessment Framework</h2>
+                        <h2>Monitoring Evaluation, Learning and Impact Assessment Framework</h2>
                     </div>
                 </div>
             </div>

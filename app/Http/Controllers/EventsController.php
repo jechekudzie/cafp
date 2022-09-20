@@ -41,6 +41,8 @@ class EventsController extends Controller
         //
         $event = request()->validate([
             'name' => 'required',
+            'location' => 'required',
+            'date' => 'required',
             'description' => 'nullable',
         ]);
         $image = '';
@@ -71,9 +73,10 @@ class EventsController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Event $event)
+    public function show($event)
     {
         //
+        $event = Event::find($event);
         return view('admin.events.show', compact('event'));
 
     }
@@ -84,9 +87,10 @@ class EventsController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Event $event)
+    public function edit($event)
     {
         //
+        $event = Event::find($event);
         return view('admin.events.edit', compact('event'));
 
     }
@@ -98,11 +102,15 @@ class EventsController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Event $event)
+    public function update($event)
     {
         //
+        $event = Event::find($event);
         $updated = request()->validate([
             'name' => 'required',
+            'location' => 'required',
+            'date' => 'required',
+            'speaker' => 'nullable',
             'description' => 'nullable',
         ]);
 
@@ -121,10 +129,10 @@ class EventsController extends Controller
             //upload the file to a directory in Public folder
             $image = $file->move('events', $file_name);
 
-            $old_path = $event->image;
+            /*$old_path = $event->image;
             if ($old_path != null) {
                 unlink($old_path);
-            }
+            }*/
         }
 
         $updated['image'] = $image;
@@ -141,9 +149,10 @@ class EventsController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Event $event)
+    public function destroy($event)
     {
         //
+        $event = Event::find($event);
         $event->delete();
         return redirect('/admin/events')->with('message', 'Event deleted successfully');
     }

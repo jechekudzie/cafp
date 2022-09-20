@@ -19,7 +19,7 @@
                 <div class="d-flex justify-content-end align-items-center">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                        <li class="breadcrumb-item active">{{$team->name}} </li>
+                        <li class="breadcrumb-item active">{{$councilMember->name}} </li>
                     </ol>
                 </div>
             </div>
@@ -44,8 +44,8 @@
                                         <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
                                     </div>
                                 @endif
-                                <h4 class="card-title">{{$team->name}} </h4>
-                                <h6 class="card-subtitle">Delete {{$team->name}} </h6>
+                                <h4 class="card-title">{{$councilMember->name}} </h4>
+                                <h6 class="card-subtitle">Delete {{$councilMember->name}} </h6>
                             </div>
 
                         </div>
@@ -53,10 +53,10 @@
                         <div class="row">
                             <div class="col-2"></div>
                             <div class="col-8">
-                                <form action="/admin/board/{{$team->id}}" method="post" class="m-t-40" novalidate>
+                                <form action="/admin/board/{{$councilMember->id}}" method="post" class="m-t-40" novalidate>
                                     {{method_field('DELETE')}}
                                     {{csrf_field()}}
-                                        <h5><span class="text-danger">Are you sure you want to delete {{$team->name}} ?</span></h5>
+                                        <h5><span class="text-danger">Are you sure you want to delete {{$councilMember->name}} ?</span></h5>
                                     <div class="form-group">
                                         <div class="controls">
                                             <input type="submit" name="add_profession"

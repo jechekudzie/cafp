@@ -68,6 +68,36 @@
                                     </div>
 
                                     <div class="form-group">
+                                        <h5>  location <span class="text-danger">*</span></h5>
+                                        <div class="controls">
+                                            <input type="text" name="location" value="{{$event->location}}"
+                                                   class="form-control"
+                                                   required
+                                                   data-validation-required-message="This field is required">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <h5>  date <span class="text-danger">*</span></h5>
+                                        <div class="controls">
+                                            <input type="text" name="date" value="{{$event->date}}"
+                                                   class="form-control"
+                                                   required
+                                                   data-validation-required-message="This field is required">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <h5>  Speaker<span class="text-danger">*</span></h5>
+                                        <div class="controls">
+                                            <input type="text" name="speaker" value="{{$event->speaker}}"
+                                                   class="form-control"
+                                                   required
+                                                   data-validation-required-message="This field is required">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
                                         <h5> Event Description <span class="text-danger">*</span></h5>
                                         <div class="controls">
                                             <textarea name="description" id="editor" class="form-control" required

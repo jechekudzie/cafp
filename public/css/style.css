@@ -1161,7 +1161,7 @@ nav.navbar.bootsnav li.dropdown ul.dropdown-menu > li a:hover, nav.navbar.bootsn
 
 /* ----- Team_2 CSS ----- */
 #team_2{
-    background:url(/banners/SL-090119-22970-03.jpg);
+    /*background:url(/banners/SL-090119-22970-03.jpg);*/
     background-repeat:no-repeat;
     -webkit-background-size:cover;
     -o-background-size:cover;
@@ -4135,6 +4135,30 @@ nav.navbar.bootsnav li.dropdown ul.dropdown-menu > li a:hover, nav.navbar.bootsn
     padding-bottom:150px;
 }
 
+#inner-banner-associates{
+    background:url('/about_us/associates.jpg');
+    -webkit-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    background-position: center center;
+    background-repeat:no-repeat;
+    border-bottom:7px solid #117143;
+    padding-top:165px;
+    padding-bottom:150px;
+}
+
+#inner-banner-events{
+    background:url('/about_us/events.jpg');
+    -webkit-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    background-position: center center;
+    background-repeat:no-repeat;
+    border-bottom:7px solid #117143;
+    padding-top:165px;
+    padding-bottom:150px;
+}
+
 #inner-banner-funding{
     background:url('/about_us/about us-07.jpg');
     -webkit-background-size:cover;
@@ -4230,8 +4254,21 @@ nav.navbar.bootsnav li.dropdown ul.dropdown-menu > li a:hover, nav.navbar.bootsn
     padding-top:165px;
     padding-bottom:150px;
 }
+
 #inner-banner-publications{
     background:url('/banners/new work-02.jpg');
+    -webkit-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    background-position: center center;
+    background-repeat:no-repeat;
+    border-bottom:7px solid #117143;
+    padding-top:165px;
+    padding-bottom:150px;
+}
+
+#inner-banner-partnerships{
+    background:url('/banners/new work-01.jpg');
     -webkit-background-size:cover;
     -o-background-size:cover;
     background-size:cover;

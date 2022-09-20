@@ -53,7 +53,7 @@
                         <div class="row">
                             <div class="col-2"></div>
                             <div class="col-8">
-                                <form action="/admin/secretariats/{{$secretariat->id}}" method="post" class="m-t-40"
+                                <form action="/admin/staff/{{$secretariat->id}}" method="post" class="m-t-40"
                                       novalidate>
                                     {{method_field('DELETE')}}
                                     {{csrf_field()}}

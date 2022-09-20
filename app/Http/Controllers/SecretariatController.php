@@ -128,7 +128,10 @@ class SecretariatController extends Controller
 
             $old_path = $secretariat->image;
             if ($old_path != null) {
-                unlink($old_path);
+                if(file_exists($old_path)){
+                    unlink($old_path);
+                }
+
             }
         }
 
@@ -151,6 +154,6 @@ class SecretariatController extends Controller
         //
         $secretariat = Secretariat::find($secretariat);
         $secretariat->delete();
-        return redirect('/admin/staff')->with('message','Secretariat deleted successfully');
+        return redirect('/admin/staff')->with('message','Staff member deleted successfully');
     }
 }

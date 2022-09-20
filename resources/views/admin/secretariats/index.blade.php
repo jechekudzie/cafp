@@ -40,10 +40,10 @@
                         <h4 class="card-title">Secretariats</h4>
                         <div class="row">
                             @foreach($secretariats as $secretariat)
-                                <div class="col-lg-4 col-md-6">
+                                <div class="col-lg-4 col-md-4">
                                     <!-- Card -->
                                     <div class="card">
-                                        <img class="card-img-top img-responsive" src="{{asset($secretariat->image)}}"
+                                        <img style="width: 250px;height: 250px;" class="img-responsive" src="{{asset($secretariat->image)}}"
                                              alt="Card image cap">
                                         <div class="card-body">
                                             <h4 class="card-title">{{$secretariat->name}}</h4>
