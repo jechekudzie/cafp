@@ -42,6 +42,9 @@
                             @if($event->speaker != null)
                                 <h5><a href="#">Speaker: {{$event->speaker}}</a></h5>
                             @endif
+                            <h5 style="margin: 10px;"><a href="#">Date: {{$event->date}}</a></h5>
+
+                            <h5 style="margin: 10px;"><a href="#">Location: {{$event->location}}</a></h5>
                             <div class="blog-tags">
                                 {{--<a href="#"><span>By</span> {{}},</a>--}}
                                 {{--  <a href="#"><span><i class="fa fa-comment-o" aria-hidden="true"></i></span> 25,</a>

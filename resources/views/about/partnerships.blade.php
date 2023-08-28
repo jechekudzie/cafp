@@ -33,25 +33,44 @@
                         <i aria-hidden="true"></i>
                     </div>
 
-                    <div style="margin-top: -5px" class="row">
+                    {{-- <div style="margin-top: -5px" class="row">
 
-                        <div class="over-view">
+                         <div class="over-view">
 
-                            @forelse($partners as $partner)
-                                <div class="col-md-6 col-sm-6 col-lg-6 col-xs-12">
-                                    <p style="padding-left: 20px;margin-top: 20px">
-                                        <a href="{{$partner->url}}" target="_blank">
+                             @forelse($partners as $partner)
+                                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                     <a href="{{$partner->url}}" target="_blank">
+                                         <img style="width: 150px; height: 100px; margin-left: 30px;"
+                                              class="img-rounded" src="{{asset($partner->path)}}">
+                                     </a>
+                                     <div style="text-align: center;">
 
-                                            <img style="width: 150px; height: 100px; margin-left: 30px;"
-                                                 class="img-rounded" src="{{asset($partner->path)}}">
-                                        </a>
-                                        <a href="{{$partner->url}}" target="_blank">
-                                            <span>{{$partner->name}}</span>
-                                        </a>
-                                    </p>
+                                         <a href="{{$partner->url}}" target="_blank">
+                                             <span style="text-align: center;">{{$partner->name}}</span>
+                                         </a>
+                                     </div>
+                                 </div>
+                                 @endforeach
+
+
+                         </div>
+                     </div>--}}
+
+                    <div class="container">
+                        <div style="margin-top: -60px;" class="row">
+                            @foreach($partners as $partner)
+                                <div style="margin-bottom:50px;" class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                    <div class="team2_detail">
+                                        <img style="width: 150px;height: 100px;" src="{{asset($partner->path)}}"
+                                             class="" alt="image">
+                                    </div>
+                                    <a href="{{url('/staff/'.$partner->id)}}">
+                                            <span style="font-size: 12px; font-weight: bold;text-align: center;text-transform: none;">
+                                                {{$partner->name}}
+                                            </span>
+                                    </a>
                                 </div>
-                                @endforeach
-
+                            @endforeach
 
                         </div>
                     </div>

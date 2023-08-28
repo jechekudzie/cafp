@@ -145,69 +145,73 @@
         <!-- Sidebar scroll-->
         <div class="scroll-sidebar">
             <!-- Sidebar navigation-->
+
             <nav class="sidebar-nav">
-                <ul id="sidebarnav">
 
-                    <li><a class="waves-effect waves-dark" href="/" aria-expanded="false"><i
-                                class="fa fa-bank"></i><span class="hide-menu">Home</span> </a>
+                    <ul id="sidebarnav">
 
-                    </li>
-                    <li><a class=" waves-effect waves-dark" href="/admin/about" aria-expanded="false"><i
-                                class="fa fa-user-md"></i><span class="hide-menu">About Us</span></a>
-                    </li>
+                        <li><a class="waves-effect waves-dark" href="/" aria-expanded="false"><i
+                                    class="fa fa-bank"></i><span class="hide-menu">Home</span> </a>
 
-                    <li>
-                        <a class=" waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i
-                                class="fa fa-pie-chart"></i><span class="hide-menu">About CAFP</span></a>
-                        <ul aria-expanded="false" class="collapse">
-                            <li><a href="/admin/board">Board of trustees</a></li>
-                            <li><a href="/admin/staff">Staff</a></li>
-                            <li><a href="/admin/associates">Associates</a></li>
+                        </li>
+                        <li><a class=" waves-effect waves-dark" href="/admin/about" aria-expanded="false"><i
+                                    class="fa fa-user-md"></i><span class="hide-menu">About Us</span></a>
+                        </li>
 
-                        </ul>
-                    </li>
+                        <li>
+                            <a class=" waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i
+                                    class="fa fa-pie-chart"></i><span class="hide-menu">About CAFP</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="/admin/board">Board of trustees</a></li>
+                                <li><a href="/admin/staff">Staff</a></li>
+                                <li><a href="/admin/associates">Associates</a></li>
 
-                    <li>
-                        <a class=" waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i
-                                class="fa fa-pie-chart"></i><span class="hide-menu">Publications</span></a>
-                        <ul aria-expanded="false" class="collapse">
-                            <li><a href="/admin/publications">Publications</a></li>
-                            <li><a href="/admin/events">Events</a></li>
-                            <li><a href="/admin/articles">Articles</a></li>
-                            <li><a href="/admin/plants">Plans</a></li>
-                            <li><a href="/admin/pillars">Pillars</a></li>
+                            </ul>
+                        </li>
 
-                        </ul>
-                    </li>
+                        <li>
+                            <a class=" waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i
+                                    class="fa fa-pie-chart"></i><span class="hide-menu">Publications</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="/admin/publications">Publications</a></li>
+                                <li><a href="/admin/events">Events</a></li>
+                                <li><a href="/admin/articles">Articles</a></li>
+                                <li><a href="/admin/plants">Plans</a></li>
+                                <li><a href="/admin/pillars">Pillars</a></li>
 
-                    <li>
-                        <a class="waves-effect waves-dark" href="/admin/partners" aria-expanded="false"><i
-                                class="ti-settings"></i><span class="hide-menu">Partners</span></a>
-                    </li>
+                            </ul>
+                        </li>
 
-                    <li>
-                        <a class="waves-effect waves-dark" href="/admin/forums" aria-expanded="false"><i
-                                class="ti-settings"></i><span class="hide-menu">Forums</span></a>
-                    </li>
-                    <li>
-                        <a class="waves-effect waves-dark" href="{{url('/admin/capacity_developments')}}" aria-expanded="false"><i
-                                class="ti-settings"></i><span class="hide-menu">Capacity developments</span></a>
-                    </li>
+                        <li>
+                            <a class="waves-effect waves-dark" href="/admin/partners" aria-expanded="false"><i
+                                    class="ti-settings"></i><span class="hide-menu">Partners</span></a>
+                        </li>
 
-                    <li><a class="waves-effect waves-dark" href="/admin/faqs" aria-expanded="false"><i
-                                class="ti-settings"></i><span class="hide-menu">FAQs</span></a>
-                    </li>
+                        <li>
+                            <a class="waves-effect waves-dark" href="/admin/vacancies" aria-expanded="false"><i
+                                    class="ti-settings"></i><span class="hide-menu">Vacancies</span></a>
+                        </li>
+                        <li>
+                            <a class="waves-effect waves-dark" href="{{url('/admin/capacity_developments')}}"
+                               aria-expanded="false"><i
+                                    class="ti-settings"></i><span class="hide-menu">Capacity developments</span></a>
+                        </li>
 
-                    <li><a class="waves-effect waves-dark" href="/admin/gallery" aria-expanded="false"><i
-                                class="ti-settings"></i><span class="hide-menu">Gallery</span></a>
-                    </li>
+                        <li><a class="waves-effect waves-dark" href="/admin/faqs" aria-expanded="false"><i
+                                    class="ti-settings"></i><span class="hide-menu">FAQs</span></a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                    </li>
+                        <li><a class="waves-effect waves-dark" href="/admin/gallery" aria-expanded="false"><i
+                                    class="ti-settings"></i><span class="hide-menu">Gallery</span></a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        </li>
 
 
-                </ul>
+                    </ul>
+
             </nav>
             <!-- End Sidebar navigation -->
         </div>
@@ -261,9 +265,26 @@
 <script src="{{asset('dist/js/custom.min.js')}}"></script>
 <!-- ============================================================== -->
 
+<script src="{{asset('/ckeditor/ckeditor.js')}}"></script>
+<script src="{{asset('/ckeditor/adapters/jquery.js')}}"></script>
+<script src="{{asset('/ckeditor/styles.js')}}"></script>
+<script src="{{asset('/ckeditor/ckeditor.custom.js')}}"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script>
+    $(function () {
+        $(".datepicker").datepicker({
+            dateFormat: "yy-mm-dd"
+        });
+    });
+</script>
+
+
 <!-- This page plugins -->
 @yield('plugins-js')
 <script src="{{asset('dist/js/dashboard1.js')}}"></script>
+
 
 <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
 <script>

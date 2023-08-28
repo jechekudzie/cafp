@@ -38,7 +38,7 @@
                             “Strengthening Evidence and Analysis to Influence Policy and Private Sector Investments”, a
                             collaboration and partnership between the Food and Agriculture Organisation of the United
                             Nations, Indaba Agricultural Policy Research Institute and the Ministry of Lands,
-                            Agriculture, Fisheries Water, and Rural Development (MLAWFRD) with funding from the
+                            Agriculture, Fisheries Water, and Rural Development (MLAFWRD) with funding from the
                             Foreign, Commonwealth & Development Office (FCDO).</p>
                         <p>
                             CAFP was set up as an exit strategy to

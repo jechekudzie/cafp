@@ -16,13 +16,19 @@ class Publications extends Component
     public $search;
     public $publication_category;
 
+    public function updatingSearch()
+    {
+        $this->resetPage();
+    }
+
     public function render()
     {
         return view('livewire.publications', [
             'publications' => Publication::search($this->search)
                 ->Category($this->publication_category)
                 ->paginate($this->perPage),
-            'publication_categories'=>PublicationCategory::all()
+            'publication_categories' => PublicationCategory::all()
         ]);
     }
 }
+

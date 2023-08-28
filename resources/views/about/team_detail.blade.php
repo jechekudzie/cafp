@@ -57,11 +57,20 @@
                 <div class="col-md-3 col-sm-3 col-xs-12">
 
                     <div class="shop-sidebar-box">
-                        <h3>CAFP Staff Team</h3>
+                        <h3>CAFP Staff</h3>
                         <ul class="blog-sidebar-category">
                             @foreach($secretariats as $secretariat)
                                 <li><a href="{{url('/staff/'.$secretariat->id)
                                 }}">{{$secretariat->name}} ({{$secretariat->position}})</a></li>
+                            @endforeach
+
+                        </ul>
+                        <br/>
+                        <h3>CAFP Affiliates</h3>
+                        <ul class="blog-sidebar-category">
+                            @foreach($associates as $associate)
+                                <li><a href="{{url('/associates/'.$associate->id)
+                                }}">{{$associate->name}} </a></li>
                             @endforeach
 
                         </ul>

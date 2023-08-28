@@ -14,6 +14,7 @@ use App\Models\Plant;
 use App\Models\PublicationCategory;
 use App\Models\Secretariat;
 use App\Models\ThematicArea;
+use App\Models\Vacancy;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -23,10 +24,11 @@ class SiteController extends Controller
 
     public function index()
     {
-        $articles = Article::all();
+        $articles = Article::sortByDesc('id');
+        $vacancies = Vacancy::all();
         $x = 0;
         $z = 0;
-        return view('holdindex', compact('articles', 'x', 'z'));
+        return view('holdindex', compact('articles', 'x', 'z','vacancies'));
     }
 
     public function welcome()
@@ -37,8 +39,9 @@ class SiteController extends Controller
         $pillars = Pillar::all();
         $plants = Plant::all();
         $events = Event::all();
-        $articles = Article::all();
-        return view('welcome', compact('partners', 'pillars', 'plants', 'events', 'articles', 'x', 'z'));
+        $articles = Article::all()->sortByDesc('id');
+        $vacancies = Vacancy::all();
+        return view('welcome', compact('partners', 'pillars', 'plants', 'events', 'articles', 'x', 'z','vacancies'));
     }
 
     public function about()
@@ -102,7 +105,7 @@ class SiteController extends Controller
 
     public function partnerships()
     {
-        $partners = Partner::all();
+        $partners = Partner::whereNotIn('id',[10,12])->get();
         return view('about.partnerships', compact('partners'));
     }
 
@@ -122,15 +125,19 @@ class SiteController extends Controller
 
     public function staff()
     {
-        $team_members = Secretariat::whereNotIn('id', [1])->get();
+        //$team_members = Secretariat::whereNotIn('id', [1])->get();
+        $team_members = Secretariat::all();
+        $associates = Associate::all();
         $ceo = Secretariat::where('id', 1)->first();
-        return view('about.team', compact('team_members', 'ceo'));
+        return view('about.team', compact('team_members', 'ceo','associates'));
     }
 
     public function staff_bio(Secretariat $secretariat)
     {
         $secretariats = Secretariat::all();
-        return view('about.team_detail', compact('secretariats', 'secretariat'));
+        $associates = Associate::all();
+
+        return view('about.team_detail', compact('secretariats', 'secretariat','associates'));
     }
 
     public function associate()
@@ -143,7 +150,8 @@ class SiteController extends Controller
     public function associate_bio(Associate $associate)
     {
         $associates = Associate::all();
-        return view('about.associate_detail', compact('associate', 'associates'));
+        $team_members = Secretariat::all();
+        return view('about.associate_detail', compact('associate', 'associates','team_members'));
     }
 
     public function funding()
@@ -196,6 +204,11 @@ class SiteController extends Controller
     {
         //dd($publicationCategory);
         return view('publications');
+    }
+    public function vacancies()
+    {
+        $vacancies = Vacancy::all();
+        return view('vacancies',compact('vacancies'));
     }
 
     public function capacity_development(CapacityDevelopment $capacity_development)

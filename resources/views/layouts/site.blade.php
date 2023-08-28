@@ -8,11 +8,12 @@
     <title>Centre For Agriculture and Food Policy</title>
 
     <!-- Bootstrap -->
-  {{--  <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
---}}
+  <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
+
 
 <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+   {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+          integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">--}}
     <!-- Font-awesome -->
     <link href="{{asset('css/font-awesome.min.css')}}" rel="stylesheet">
 
@@ -34,6 +35,7 @@
 
 
     <link rel="shortcut icon" href="{{asset('tests/logo 2-01.jpg')}}">
+
 
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -72,7 +74,7 @@
             </div>
         </div>
     </div>
-    <nav class="navbar navbar-default no-background navbar-sticky bootsnav">
+    <nav class="navbar navbar-default no-background {{--navbar-sticky--}} bootsnav">
         <div class="container">
             <!-- Start Header Navigation -->
             <div class="navbar-header">
@@ -120,8 +122,7 @@
                                 <ul class="dropdown-menu">
                                     <li><a href="{{url('/trustees')}}">Board Of Trustees</a>
                                     </li>
-                                    <li><a href="{{url('/staff')}}">CAFP Staff</a></li>
-                                    <li><a href="{{url('/associates')}}">CAFP Research Associates</a></li>
+                                    <li><a href="{{url('/staff')}}">CAFP Staff and Affiliates</a></li>
                                 </ul>
                             </li>
                             <li><a href="{{url('/funding')}}">Funding</a></li>
@@ -141,16 +142,16 @@
 
                             </li>
 
-                           {{-- <li><a href="{{url('/projects')}}">Projects & Programs</a></li>--}}
-                           {{-- <li><a href="{{url('/data')}}">Data resources</a></li>--}}
+                            {{-- <li><a href="{{url('/projects')}}">Projects & Programs</a></li>--}}
+                            {{-- <li><a href="{{url('/data')}}">Data resources</a></li>--}}
                         </ul>
                     </li>
 
-                    <li style="font-size: 16px;" >
+                    <li style="font-size: 16px;">
                         <a style="font-size: 16px;" href="{{url('/publications/all')}}">Publications</a>
                     </li>
 
-                    <li style="font-size: 16px;" >
+                    <li style="font-size: 16px;">
                         <a style="font-size: 16px;" href="{{url('/events/all')}}">Events</a>
                     </li>
 
@@ -179,7 +180,8 @@
                         </ul>
                     </li>--}}
 
-                    <li style="font-size: 16px;"><a style="font-size: 16px;" href="{{url('/contact')}}">Contact Us</a></li>
+                    <li style="font-size: 16px;"><a style="font-size: 16px;" href="{{url('/contact')}}">Contact Us</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -204,14 +206,14 @@
                         “Strengthening Evidence and Analysis to Influence Policy and Private Sector Investments”, a
                         collaboration and partnership between the Food and Agriculture Organisation of the United
                         Nations, Indaba Agricultural Policy Research Institute and the Ministry of Lands,
-                        Agriculture, Fisheries Water, and Rural Development (MLAWFRD) with funding from the
+                        Agriculture, Fisheries Water, and Rural Development (MLAFWRD) with funding from the
                         Foreign, Commonwealth & Development Office (FCDO).</p>
                     <div class="adres">
                         <p><i style="color: white;" class="fa fa-phone" aria-hidden="true"></i>
                         </p>
                         <p>
-                            <span>+263 78 499 5187 </span>
-                            <span>+263 782040979 </span>
+                            <span>+263 784 995 187 </span>
+                            <span>+263 782 040 979 </span>
 
                         </p>
                     </div>
@@ -250,9 +252,8 @@
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Establishment and mandate</a></li>
                         <li><a href="#">Our strategy</a></li>
-                        <li><a href="#">Board of trustees</a></li>
+                        <li><a href="#">Board of Trustees</a></li>
                         <li><a href="#">Governance</a></li>
-                        <li><a href="#">Funding</a></li>
                         <li><a href="#">CAFP staff</a></li>
                     </ul>
                 </div>
@@ -263,18 +264,18 @@
                     <div style="background-color: white" id="sync1" class="owl-carousel">
                         @foreach(\App\Models\Partner::all() as $partner)
                             <a href="{{$partner->url}}" target="_blank">
-                                <div class="item"><img src="{{asset($partner->path)}}" alt="image"></div>
+                                <div class="item"><img style="width: 90px;" src="{{asset($partner->path)}}" alt="image"></div>
                             </a>
                         @endforeach
 
                     </div>
                     <div style="background-color: white" id="sync2" class="owl-carousel">
                         @foreach(\App\Models\Partner::all() as $partner)
-                            <a href="{{$partner->url}}" target="_blank">
-                                <div class="item"><img src="{{asset($partner->path)}}" alt="image"></div>
+                            <a style="margin: 20px;" href="{{$partner->url}}" target="_blank">
+                                <div class="item"><img style="width: 90px; margin: 20px;" src="{{asset($partner->path)}}" alt="image"></div>
                             </a>
                         @endforeach
-                    </div>
+                    </div> 
                 </div>
             </div>
 
@@ -296,7 +297,7 @@
                 <div class="col-md-5">
                     <ul class="socialicons">
                         <li><a target="_blank" href="https://www.facebook.com/CAFP2021"><i class="fa fa-facebook"
-                                                                                             aria-hidden="true"></i></a>
+                                                                                           aria-hidden="true"></i></a>
                         </li>
                         <li><a target="_blank" href="https://twitter.com/CenterforAgric1?s=09"><i class="fa fa-twitter"
                                                                                                   aria-hidden="true"></i></a>
@@ -319,7 +320,9 @@
 <script src="{{asset('js/jquery.2.2.3.min.js')}}"></script>
 {{--<script src="{{asset('js/bootstrap.min.js')}}"></script>--}}
 <!-- Latest compiled and minified JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
 
 <script src="{{asset('js/owl.carousel.min.js')}}"></script>
 <script src="{{asset('js/bootsnav.js')}}"></script>

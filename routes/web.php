@@ -47,6 +47,7 @@ Route::get('/projects', 'SiteController@projects');
 Route::get('/data', 'SiteController@data');
 Route::get('/covid', 'SiteController@covid');
 Route::get('/publications/all', 'SiteController@publications');
+Route::get('/vacancies', 'SiteController@vacancies');
 
 
 //backend
@@ -58,6 +59,7 @@ Route::resource('/admin/pillars', 'PillarsController');
 Route::resource('/admin/events', 'EventsController');
 Route::resource('/admin/articles', 'ArticleController');
 Route::resource('/admin/capacity_developments', 'CapacityDevelopmentController');
+Route::resource('/admin/vacancies', 'VacancyController');
 //sections
 Route::get('/admin/capacity_developments/{capacity_development}/sections', 'CapacityDevelopmentController@sections');
 Route::get('/admin/capacity_developments/{capacity_development}/create_section', 'CapacityDevelopmentController@create_section');

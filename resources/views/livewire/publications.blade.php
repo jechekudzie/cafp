@@ -42,11 +42,11 @@
     <br/>
     <br/>
     <br/>
+    <br/>
     @foreach($publications as $publication)
         <div style="margin-top:-80px;" class="blog-box-deatil">
-            <h3><a style="color:#FCC100;" href="javascript:void(0)
-">{{$publication->publication_category->name}}</a></h3>
-            <h4><a style="color: #117143;" href="{{url($publication->file)}}" target="_blank">{{$publication->title}}</a></h4>
+            <h4><a style="color: #117143;" href="{{url($publication->file)}}"
+                   target="_blank">{{$publication->title}}</a></h4>
             <div class="blog-tags">
                 <a href="javascript:void(0)"><span>Authors</span> {{$publication->authors}},</a>
                 <h4><a style="color:grey;" href="javascript:void(0)">{{$publication->sub_title}}</a></h4>
@@ -55,11 +55,12 @@
         </div>
     @endforeach
 
-    <div class="livewire-pagination">{!! $publications->links() !!}</div>
-
+    <div class="livewire-pagination">{!! $publications->links('pagination::bootstrap-4') !!}</div>
+    {{--{{$images->links('pagination::bootstrap-4')}}--}}
     <div>
         Showing {!! $publications->firstItem() !!} of {!! $publications->lastItem() !!} out
         of {!! $publications->total() !!}
 
     </div>
 </div>
+

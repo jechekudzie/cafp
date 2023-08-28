@@ -36,7 +36,7 @@
                             <div role="tabpanel" class="tab-pane fade in active" id="description">
                                 <div class="row">
                                     <div class="col-sm-12 col-md-8 col-lg-8">
-                                       {{-- <h4>BIO</h4>--}}
+                                        {{-- <h4>BIO</h4>--}}
                                         {!! $associate->bio !!}
                                     </div>
                                 </div>
@@ -48,11 +48,20 @@
                 <div class="col-md-3 col-sm-3 col-xs-12">
 
                     <div class="shop-sidebar-box">
-                        <h3>CAFP Research Associates</h3>
+                        <h3>CAFP Affiliates</h3>
                         <ul class="blog-sidebar-category">
                             @foreach($associates as $associate)
                                 <li><a href="{{url('/associates/'.$associate->id)
                                 }}">{{$associate->name}} </a></li>
+                            @endforeach
+
+                        </ul>
+                        <br/>
+                        <h3>CAFP Staff</h3>
+                        <ul class="blog-sidebar-category">
+                            @foreach($team_members as $team_member)
+                                <li><a href="{{url('/staff/'.$team_member->id)
+                                }}">{{$team_member->name}} </a></li>
                             @endforeach
 
                         </ul>
